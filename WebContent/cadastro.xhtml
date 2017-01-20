@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Cadastro Funcionario</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="ID: " for="campo-id" />
+			<h:inputText value="#{funcionarioBean.funcionario.codigo}"
+				id="campo-id" />
+			<h:message for="campo-id" />
+
+			<h:outputLabel value="Salario: " for="campo-salario" />
+			<h:inputText value="#{funcionarioBean.funcionario.salario}"
+				id="campo-salario">
+				<f:convertNumber locale="pt_BR" />
+			</h:inputText>
+			<h:message for="campo-salario" />
+
+			<h:outputLabel value="Aniverssario: " for="campo-aniverssario" />
+			<h:inputText value="#{funcionarioBean.funcionario.aniverssario}"
+				id="campo-aniverssario">
+				<f:convertDateTime pattern="dd/MM/yyyy" />
+			</h:inputText>
+			<h:message for="campo-aniverssario" />
+			
+			<h:commandButton value="Cadastrar" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
