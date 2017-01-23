@@ -16,6 +16,7 @@ public class FuncionarioBean {
 
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
+		System.out.println(funcionario.getAniverssario());
 	}
 
 }

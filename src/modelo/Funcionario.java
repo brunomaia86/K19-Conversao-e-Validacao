@@ -1,11 +1,23 @@
 package modelo;
 
-import java.util.Date;
+import java.util.Date ;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 public class Funcionario {
 
+	@NotNull(message="insira o codigo desejado!")
+	@Min(value=5)
+	@Max(value=19)
 	private Integer codigo;
+	
+	@NotNull
+	@Min(value=0)
 	private Double salario;
+
+	@NotNull
 	private Date aniverssario;
 
 	public Integer getCodigo() {

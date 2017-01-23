@@ -13,9 +13,10 @@
 <h:body>
 	<h:form>
 		<h:panelGrid columns="3">
-			<h:outputLabel value="ID: " for="campo-id" />
+			<h:outputLabel value="Codigo: " for="campo-id" />
 			<h:inputText value="#{funcionarioBean.funcionario.codigo}"
-				id="campo-id" />
+				id="campo-id">
+				</h:inputText>
 			<h:message for="campo-id" />
 
 			<h:outputLabel value="Salario: " for="campo-salario" />
