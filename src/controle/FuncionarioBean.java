@@ -1,11 +1,10 @@
 package controle;
 
-import javax.faces.bean.ManagedBean;
+import javax.annotation.ManagedBean;
 
 import modelo.Funcionario;
 
 @ManagedBean
-
 public class FuncionarioBean {
 
 	private Funcionario funcionario = new Funcionario();
